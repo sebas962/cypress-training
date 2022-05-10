@@ -4,7 +4,7 @@
   "description": "This is Workshop about Cypress",
   "main": "index.js",
   "scripts": {
-    "test": "cypress open"
+    "test:open": "cypress open"
   },
   "devDependencies": {
     "cypress": "^9.6.1"
