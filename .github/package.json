@@ -1,5 +1,4 @@
 {
-
   "name": "cypress-training",
   "version": "1.0.0",
   "description": "This is Workshop about Cypress",
@@ -18,6 +17,4 @@
   ],
   "author": "Sebastian Gomez Graciano <sebastian.gomezg@perficient.com> (https://github.com/sebas962)",
   "license": "MIT"
-
-
 }
