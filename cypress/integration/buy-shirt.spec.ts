@@ -10,7 +10,7 @@ describe("Buy a t-shirt", () => {
         cy.get("#passwd").type("WorkshopProtractor")
         // Localizadores propios
         cy.get("#SubmitLogin > span > i").click()
-        cy.get(" p > button > span").click()
+        cy.get("p > button > span").click()
         cy.get("#cgv").click()
         cy.get(" p > button > span").click()
         cy.get("#HOOK_PAYMENT > div:nth-child(1) > div > p > a").click()
