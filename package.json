@@ -3,11 +3,18 @@
   "version": "1.0.0",
   "description": "This is Workshop about Cypress",
   "main": "index.js",
-  "scripts": {
-    "test:open": "cypress open"
-  },
   "devDependencies": {
-    "cypress": "^9.6.1"
+    "@typescript-eslint/eslint-plugin": "^5.21.0",
+    "@typescript-eslint/parser": "^5.21.0",
+    "cypress": "^9.6.0",
+    "eslint": "^8.14.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-plugin-cypress": "^2.12.1",
+    "typescript": "^4.6.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sebas962/cypress-training"
   },
   "keywords": [
     "ui-testing",
@@ -15,21 +22,12 @@
     "practice",
     "cypress"
   ],
-  "author": "Sebastian Gomez Graciano <sebastian.gomezg@perficient.com> (https://github.com/sebas962)",
+  "author": "[Sebastian Gomez Graciano] <[sebastian.gomezg@perficient.com]> ([https://github.com/sebas962)]",
   "license": "MIT",
   "scripts": {
+    "test:open": "npm run lint && cypress open",
     "test": "cypress run",
-    "test:open": "cypress open"
-  },
-  "dependencies": {
-    "cypress": "^9.6.1"
-  },
-  "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^5.23.0",
-    "@typescript-eslint/parser": "^5.23.0",
-    "eslint": "^8.15.0",
-    "eslint-config-google": "^0.14.0",
-    "eslint-plugin-cypress": "^2.12.1",
-    "typescript": "^4.6.4"
+    "lint": "eslint ./cypress/integration/**/*.ts",
+    "lint:fix": "npm run lint -- --fix"
   }
 }
