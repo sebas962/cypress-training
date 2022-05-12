@@ -21,8 +21,8 @@ const paymentStepPage = new PaymentStepPage();
 describe("Buy a t-shirt", () => {
   it("then the t-shirt should be bought", () => {
     const message = "Your order on My Store is complete.";
-    let user = "aperdomobo@gmail.com";
-    let pass = "WorkshopProtractor";
+    const user = "aperdomobo@gmail.com";
+    const pass = "WorkshopProtractor";
     menuContentPage.visitMenuContentPage();
     menuContentPage.goToTShirtMenu();
     productListPage.visitAddProduct();
