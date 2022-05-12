@@ -13,8 +13,8 @@ class PaymentStepPage {
     cy.get(this.addSelectBank).click();
     cy.get(this.confirm).click();
   }
-  public verifyQuestion(typeVerify: string, verifyText: string): void {
-    cy.get(this.question).should(typeVerify, verifyText);
+  public verifyConfirmationMessage(verifyText: string): void {
+    cy.get(this.question).should("have.text", verifyText);
   }
 }
 
