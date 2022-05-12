@@ -1,3 +1,5 @@
+/* eslint-disable require-jsdoc */
+
 class LoginPage {
   private addUser: string;
   private addPass: string;

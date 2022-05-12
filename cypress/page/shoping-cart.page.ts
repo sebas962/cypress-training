@@ -1,3 +1,5 @@
+/* eslint-disable require-jsdoc */
+
 class ShoppingCartPage {
   private shoppingMenuCart: string;
   private shoppingCart: string;
@@ -13,7 +15,7 @@ class ShoppingCartPage {
     cy.get(this.shoppingMenuCart).click();
     cy.get(this.shoppingCart).click();
     cy.get(this.checkoutProcess).click();
-    }
+  }
 }
 
 export { ShoppingCartPage };

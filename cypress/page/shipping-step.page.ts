@@ -1,3 +1,5 @@
+/* eslint-disable require-jsdoc */
+
 class ShipingStepPage {
   private addContinueProcess: string;
   private addCheck: string;

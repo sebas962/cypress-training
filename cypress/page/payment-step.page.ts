@@ -1,3 +1,5 @@
+/* eslint-disable require-jsdoc */
+
 class PaymentStepPage {
   private addSelectBank: string;
   private confirm: string;

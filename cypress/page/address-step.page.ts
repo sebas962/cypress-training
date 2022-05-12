@@ -1,3 +1,5 @@
+/* eslint-disable require-jsdoc */
+
 class AddressStepPage {
   private addCheckOutProccess: string;
 

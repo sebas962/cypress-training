@@ -1,3 +1,5 @@
+/* eslint-disable require-jsdoc */
+
 import {
   MenuContentPage,
   ProductListPage,

@@ -1,3 +1,5 @@
+/* eslint-disable require-jsdoc */
+
 class ProductListPage {
   private addProduct: string;
 
