@@ -28,9 +28,6 @@ describe("Buy a t-shirt", () => {
     shipingStepPage.visitAddShiping();
     paymentStepPage.visitOrder();
 
-    paymentStepPage.verifyQuestion(
-      "have.text",
-      "Your order on My Store is complete."
-    );
+    paymentStepPage.verifyConfirmationMessage("Your order on My Store is complete.");
   });
 });

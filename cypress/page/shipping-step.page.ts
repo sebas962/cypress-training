@@ -3,7 +3,7 @@ class ShipingStepPage {
   private addCheck: string;
 
   constructor() {
-    this.addContinueProcess = "p > button > span";
+    this.addContinueProcess = "button[name='processCarrier']";
     this.addCheck = "#cgv";
   }
 

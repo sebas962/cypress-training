@@ -5,16 +5,16 @@ class PaymentStepPage {
 
   constructor() {
     this.addSelectBank = ".bankwire";
-    this.confirm = "#cart_navigation > button > span";
-    this.question = "#center_column > div > p > strong";
+    this.confirm = "#cart_navigation button";
+    this.question = ".cheque-indent > .dark";
   }
 
   public visitOrder(): void {
     cy.get(this.addSelectBank).click();
     cy.get(this.confirm).click();
   }
-  public verifyQuestion(typeVerify: string, verifyText: string): void {
-    cy.get(this.question).should(typeVerify, verifyText);
+  public verifyConfirmationMessage(verifyText: string): void {
+    cy.get(this.question).should("have.text", verifyText);
   }
 }
 
