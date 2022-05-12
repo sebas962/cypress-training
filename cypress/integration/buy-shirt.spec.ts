@@ -18,6 +18,7 @@ const paymentStepPage = new PaymentStepPage();
 
 describe("Buy a t-shirt", () => {
   it("then the t-shirt should be bought", () => {
+    const message = "Your order on My Store is complete.";
     let user = "aperdomobo@gmail.com";
     let pass = "WorkshopProtractor";
     menuContentPage.visitMenuContentPage();
@@ -30,8 +31,6 @@ describe("Buy a t-shirt", () => {
     shipingStepPage.visitAddShiping();
     paymentStepPage.visitOrder();
 
-    paymentStepPage.verifyConfirmationMessage(
-      "Your order on My Store is complete."
-    );
+    paymentStepPage.verifyConfirmationMessage(message);
   });
 });
