@@ -23,8 +23,5 @@
   "scripts": {
     "test": "cypress run",
     "test:open": "cypress open"
-  },
-  "dependencies": {
-    "cypress": "^9.6.1"
   }
 }

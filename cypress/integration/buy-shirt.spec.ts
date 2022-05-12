@@ -18,16 +18,20 @@ const paymentStepPage = new PaymentStepPage();
 
 describe("Buy a t-shirt", () => {
   it("then the t-shirt should be bought", () => {
+    const user = "aperdomobo@gmail.com";
+    const pass = "WorkshopProtractor";
     menuContentPage.visitMenuContentPage();
     menuContentPage.goToTShirtMenu();
     productListPage.visitAddProduct();
     shoppingCartPage.visitMenuShoppingCarte();
-    loginPage.login("aperdomobo@gmail.com", "WorkshopProtractor");
+    loginPage.login(user, pass);
     // Own locators
     addressPage.visitAddressCheckOut();
     shipingStepPage.visitAddShiping();
     paymentStepPage.visitOrder();
 
-    paymentStepPage.verifyConfirmationMessage("Your order on My Store is complete.");
+    paymentStepPage.verifyConfirmationMessage(
+      "Your order on My Store is complete."
+    );
   });
 });
