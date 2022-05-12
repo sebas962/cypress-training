@@ -15,11 +15,11 @@ const loginPage = new LoginPage();
 const addressPage = new AddressStepPage();
 const shipingStepPage = new ShipingStepPage();
 const paymentStepPage = new PaymentStepPage();
-const user = "aperdomobo@gmail.com";
-const pass = "WorkshopProtractor";
 
 describe("Buy a t-shirt", () => {
   it("then the t-shirt should be bought", () => {
+    let user = "aperdomobo@gmail.com";
+    let pass = "WorkshopProtractor";
     menuContentPage.visitMenuContentPage();
     menuContentPage.goToTShirtMenu();
     productListPage.visitAddProduct();
