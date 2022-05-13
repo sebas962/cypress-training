@@ -8,7 +8,7 @@ class LoginPage {
   constructor() {
     this.addUser = "#email";
     this.addPass = "#passwd";
-    this.submit = "#SubmitLogin > span > i";
+    this.submit = "#SubmitLogin";
   }
 
   public login(email: string, password: string): void {

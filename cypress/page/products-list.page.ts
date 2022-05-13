@@ -4,8 +4,7 @@ class ProductListPage {
   private addProduct: string;
 
   constructor() {
-    this.addProduct =
-      "#center_column a.button.ajax_add_to_cart_button.btn.btn-default";
+    this.addProduct = ".ajax_add_to_cart_button";
   }
 
   public visitAddProduct(): void {
