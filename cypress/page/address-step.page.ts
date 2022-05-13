@@ -4,7 +4,7 @@ class AddressStepPage {
   private addCheckOutProccess: string;
 
   constructor() {
-    this.addCheckOutProccess = "p > button > span";
+    this.addCheckOutProccess = "button[name='processAddress']";
   }
 
   public visitAddressCheckOut(): void {
