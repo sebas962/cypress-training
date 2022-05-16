@@ -2,7 +2,7 @@
 
 import {
   MenuContentPage,
-  DressesListPage
+  DressesListPage,
 } from "../page/index";
 
 describe("the user navigates to the dresses page should", () => {
@@ -18,7 +18,7 @@ describe("the user navigates to the dresses page should", () => {
       "Printed Dress",
       "Printed Summer Dress",
       "Printed Summer Dress",
-      "Printed Chiffon Dress"
+      "Printed Chiffon Dress",
     ];
   });
 
