@@ -18,14 +18,14 @@ describe("the user navigates to the dresses page should", () => {
   });
 
   it("show the available dresses", () => {
-    //Arrange
+    // Arrange
     menuContentPage.visitMenuContentPage();
     menuContentPage.goDressesMenu();
 
-    //Act
+    // Act
     dressesListPage.getDressProducts();
 
-    //Assert
+    // Assert
     dressesListPage.validateItemsNumber(allDresses.length);
     dressesListPage.validateItemsNames(allDresses);
   });
