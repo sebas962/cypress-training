@@ -25,9 +25,9 @@ describe("the user navigates to the dresses page should", () => {
   it("show the available dresses", () => {
     // Arrange
     menuContentPage.visitMenuContentPage();
-    menuContentPage.goDressesMenu();
 
-    // Act
+    // Action
+    menuContentPage.goDressesMenu();
     dressesListPage.getDressProducts();
 
     // Assert
