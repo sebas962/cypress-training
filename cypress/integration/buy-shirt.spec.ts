@@ -1,5 +1,3 @@
-/* eslint-disable require-jsdoc */
-
 import {
   MenuContentPage,
   ProductListPage,
@@ -10,29 +8,42 @@ import {
   PaymentStepPage,
 } from "../page/index";
 
-const menuContentPage = new MenuContentPage();
-const productListPage = new ProductListPage();
-const shoppingCartPage = new ShoppingCartPage();
-const loginPage = new LoginPage();
-const addressPage = new AddressStepPage();
-const shipingStepPage = new ShipingStepPage();
-const paymentStepPage = new PaymentStepPage();
-
 describe("Buy a t-shirt", () => {
+  let menuContentPage: MenuContentPage;
+  let productListPage: ProductListPage;
+  let shoppingCartPage: ShoppingCartPage;
+  let loginPage: LoginPage;
+  let addressStepPage: AddressStepPage;
+  let shippingPage: ShipingStepPage;
+  let paymentPage: PaymentStepPage;
+
+  before(() => {
+    menuContentPage = new MenuContentPage();
+    productListPage = new ProductListPage();
+    shoppingCartPage = new ShoppingCartPage();
+    loginPage = new LoginPage();
+    addressStepPage = new AddressStepPage();
+    shippingPage = new ShipingStepPage();
+    paymentPage = new PaymentStepPage();
+  });
+
   it("then the t-shirt should be bought", () => {
+    // Arrange
     const message = "Your order on My Store is complete.";
     const user = "aperdomobo@gmail.com";
     const pass = "WorkshopProtractor";
     menuContentPage.visitMenuContentPage();
+
+    // Action
     menuContentPage.goToTShirtMenu();
     productListPage.visitAddProduct();
     shoppingCartPage.visitMenuShoppingCarte();
     loginPage.login(user, pass);
-    // Own locators
-    addressPage.visitAddressCheckOut();
-    shipingStepPage.visitAddShiping();
-    paymentStepPage.visitOrder();
+    addressStepPage.visitAddressCheckOut();
+    shippingPage.visitAddShiping();
+    paymentPage.visitOrder();
 
-    paymentStepPage.verifyConfirmationMessage(message);
+    // Assert
+    paymentPage.verifyConfirmationMessage(message);
   });
 });
