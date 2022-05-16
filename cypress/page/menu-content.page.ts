@@ -3,10 +3,13 @@
 class MenuContentPage {
   private tShirtMenu: string;
   private menuContentPageURL: string;
+  private dressesMenu: string;
 
   constructor() {
-    this.tShirtMenu = "#block_top_menu > ul > li > [title='T-shirts']";
+    this.tShirtMenu = ".sf-menu > li > [title='T-shirts']";
     this.menuContentPageURL = "http://automationpractice.com/";
+      this.dressesMenu = ".sf-menu > li > [title=Dresses]";
+
   }
 
   public visitMenuContentPage(): void {
@@ -15,6 +18,9 @@ class MenuContentPage {
 
   public goToTShirtMenu(): void {
     cy.get(this.tShirtMenu).click();
+  }
+  public goDressesMenu(): void {
+    cy.get(this.dressesMenu).click();
   }
 }
 
