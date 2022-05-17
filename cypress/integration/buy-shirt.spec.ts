@@ -1,3 +1,5 @@
+/* eslint-disable require-jsdoc */
+
 import {
   MenuContentPage,
   ProductListPage,
@@ -30,13 +32,14 @@ describe("Buy a t-shirt", () => {
   it("then the t-shirt should be bought", () => {
     // Arrange
     const message = "Your order on My Store is complete.";
+    const product = "Faded Short Sleeve T-shirts";
     const user = "aperdomobo@gmail.com";
     const pass = "WorkshopProtractor";
     menuContentPage.visitMenuContentPage();
 
     // Action
     menuContentPage.goToTShirtMenu();
-    productListPage.visitAddProduct();
+    productListPage.addTShirtToCart(product);
     shoppingCartPage.visitMenuShoppingCarte();
     loginPage.login(user, pass);
     addressStepPage.visitAddressCheckOut();
