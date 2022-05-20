@@ -25,14 +25,13 @@ describe("The user in the QA tools page should", () => {
     // Arrange
     personalInformPage.visitToolsQAForm();
     const formMessage = "Thanks for submitting the form";
-    // Act
+    // Action
     personalInformPage.fillForm(personalInformation);
     // Assert
-
     personalInformPage.completTheProcess(formMessage);
     personalInformPage.verifyStateAndCity(
         personalInformation.city,
-        personalInformation.state
+        personalInformation.state,
     );
   });
 });
