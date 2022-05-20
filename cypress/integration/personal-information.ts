@@ -1,6 +1,6 @@
 /* eslint-disable require-jsdoc */
 
-import { PersonalPage } from "../page/index";
+import {PersonalPage} from "../page/index";
 
 const personalInformation = {
   name: "Sebastián",
@@ -30,8 +30,8 @@ describe("The user in the QA tools page should", () => {
     // Assert
     personalInformPage.verifyConfirmationPageTitle(formMessage);
     personalInformPage.verifyStateAndCity(
-       personalInformation.city,
-       personalInformation.state,
+        personalInformation.city,
+        personalInformation.state,
     );
   });
 });
