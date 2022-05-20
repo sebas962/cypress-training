@@ -1,4 +1,5 @@
 /* eslint-disable require-jsdoc */
+
 interface PersonalInform {
   name: string;
   lastName: string;
@@ -51,7 +52,7 @@ class PersonalPage {
 
   public verifyStateAndCity(stateModal: string, cityModal: string): any {
     return cy
-      .contains('td', this.stateAndCityModal)
+      .contains("td", this.stateAndCityModal)
       .next()
       .should("have.text", `${stateModal} ${cityModal}`);
   }
