@@ -23,10 +23,10 @@ class PersonalPage {
   private subject: string;
   private currentAddresss: string;
   private submit: string;
-  private submitting: string;
+  private confirmationModalTitle: string;
   private state: string;
   private city: string;
-  private modalFirstName: string;
+  private stateAndCityModal: string;
 
   constructor() {
     this.toolsQaFormURL = "https://demoqa.com/automation-practice-form";
@@ -41,17 +41,18 @@ class PersonalPage {
     this.state = "#state";
     this.city = "#city";
     this.submit = "#userForm";
-    this.submitting = ".modal-title";
-    this.modalFirstName = "tr:nth-child(10)  td:nth-child(2)";
+    this.confirmationModalTitle = ".modal-title";
+    this.stateAndCityModal = "State and City";
   }
 
-  public completTheProcess(message: string): any {
-    return cy.get(this.submitting).should("have.text", message);
+  public verifyConfirmationPageTitle(message: string): any {
+    return cy.get(this.confirmationModalTitle).should("have.text", message);
   }
 
-  public verifyStateAndCity(cityModal: string, stateModal: string): any {
+  public verifyStateAndCity(stateModal: string, cityModal: string): any {
     return cy
-      .get(this.modalFirstName)
+      .contains('td', this.stateAndCityModal)
+      .next()
       .should("have.text", `${stateModal} ${cityModal}`);
   }
   public findGender(gender: string): any {
