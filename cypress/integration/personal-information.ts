@@ -30,8 +30,8 @@ describe("The user in the QA tools page should", () => {
     // Assert
     personalInformPage.verifyConfirmationPageTitle(formMessage);
     personalInformPage.verifyStateAndCity(
-        personalInformation.city,
-        personalInformation.state,
+      personalInformation.state,
+      personalInformation.city,
     );
   });
 });
