@@ -10,12 +10,13 @@ describe("the user navigates", () => {
   });
 
   it("should upload file and verify the file title", () => {
-    const text = "terminal_input_screenshot";
-    // arrange
+    const fileUpload = "terminal_input_screenshot.png";
+    const text = fileUpload.substring(0, fileUpload.length - 4);
+    // Arrange
     uploadPage.visitUploadPage();
-    // action
-    uploadPage.uploadFile();
-    // asserts
-    uploadPage.getUploadedFileName(text);
+    // Action
+    uploadPage.uploadFile(fileUpload);
+    // Asserts
+    uploadPage.verifyUploadedFile(text);
   });
 });
