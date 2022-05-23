@@ -1,7 +1,6 @@
 /* eslint-disable require-jsdoc */
 
-import { UploadFilePage } from "../page/index";
-const text = 'terminal_input_screenshot';
+import {UploadFilePage} from "../page/index";
 
 describe("the user navigates", () => {
   let uploadPage: UploadFilePage;
@@ -11,6 +10,7 @@ describe("the user navigates", () => {
   });
 
   it("should upload file and verify the file title", () => {
+    const text = "terminal_input_screenshot";
     // arrange
     uploadPage.visitUploadPage();
     // action
