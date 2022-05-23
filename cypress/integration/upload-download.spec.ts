@@ -11,7 +11,7 @@ describe("the user navigates", () => {
 
   it("should upload file and verify the file title", () => {
     const fileUpload = "terminal_input_screenshot.png";
-    const text = fileUpload.substring(0, fileUpload.length - 4);
+    const text = fileUpload.slice(0, fileUpload.length - 4);
     // Arrange
     uploadPage.visitUploadPage();
     // Action
